@@ -11,6 +11,18 @@ using std::endl;
 #include <string.h>
 #include <iostream>
 
+void hospStatRep(int *TOTAL_REG_BEDS, int *TOTAL_ICU_BEDS, int *TOTAL_ICU_VENT_BEDS, int *normal_reg_beds_needed, int *normal_icu_beds_needed, int *normal_icu_vent_beds_needed){
+	cout << "HOSPITAL STATISTICS REPORT" << endl;
+	cout << "--------------------------" << endl;
+	cout << "Total Regular Beds in Hospital: " << *TOTAL_REG_BEDS << endl;
+	cout << "Number of ICU Beds in Hospital: " << *TOTAL_ICU_BEDS << endl;
+	cout << "Number of ICU Beds with Ventilators: " << *TOTAL_ICU_VENT_BEDS << endl;
+	cout << endl;
+	cout << "Average Number of Regular Beds Occupied: " << *normal_reg_beds_needed << endl;
+	cout << "Average Number of ICU Beds Occupied: " << *normal_icu_beds_needed << endl;
+	cout << "Average Number of ICU Beds With Ventilators Occupied: " << *normal_icu_vent_beds_needed << endl;
+    cout << endl;
+}
 
 int main ()
 {
@@ -20,7 +32,6 @@ int main ()
 	int TOTAL_ICU_BEDS = 120;   // separate from reg beds
 	int TOTAL_ICU_VENT_BEDS = 50;  // separate from ICU beds
 	
-
 	double PERCENT_REG_NEEDED = 0.80;
 	double PERCENT_ICU_NEEDED = 0.55;
 	double PERCENT_ICU_VENT_NEEDED = 0.15;
@@ -39,15 +50,17 @@ int main ()
 
 	int regBedsLeft;
 	int icuBedsLeft;
-	int icuVentBedsLeft;
+	int icuVentBedsLeft;	
 
-	cout << "Total Regular Beds in Hospital: " << TOTAL_REG_BEDS << endl;
-	cout << "Number of ICU Beds in Hospital: " << TOTAL_ICU_BEDS << endl;
-	cout << "Number of ICU Beds with Ventilators: " << TOTAL_ICU_VENT_BEDS << endl;
-	cout << "Average Number of Regular Beds Occupied: " << normal_reg_beds_needed << endl;
-	cout << "Average Number of ICU Beds Occupied: " << normal_icu_beds_needed << endl;
-	cout << "Average Number of ICU Beds With Ventilators Occupied: " << normal_icu_vent_beds_needed << endl;
-    cout << endl;
+	char statDisplayChoice;
+
+	/*cout << "Display Hospital Statistics? (Y/N): " ;
+	cin >> statDisplayChoice;
+	cout << endl;*/
+
+	//if(statDisplayChoice ==+ "Y" || statDisplayChoice ==+ "y"){
+       hospStatRep(&TOTAL_REG_BEDS, &TOTAL_ICU_BEDS, &TOTAL_ICU_VENT_BEDS, &normal_reg_beds_needed, &normal_icu_beds_needed, &normal_icu_vent_beds_needed);
+	//} 
 
 	cout << "Enter trial number that may be hospitalized due to emergency: " ;
 	cin >> general_trial_beds_needed;
