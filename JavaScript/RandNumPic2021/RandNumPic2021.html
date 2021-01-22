@@ -7,10 +7,18 @@ html {
   background-color: #225555;
   font-family: arial, verdana, tahoma;
 }
+
 .heading{
   color: #ffffff;
   margin-left: 15px;
 }
+
+.number-box-holder{
+display: grid;
+grid-template-columns: 190px 190px 190px 190px 190px 190px;
+grid-column-gap; 20px;
+}
+
 .number-box{
 padding: 8px;
 width: 150px;
@@ -20,9 +28,9 @@ font-size: 36px;
 text-align: right;
 border: 1px solid #aaaaff;
 background-color: #aaaaff;
-float: left;
 margin: 15px;
 }
+
 .button{
 width: 180px;
 height: 30px;
@@ -32,6 +40,29 @@ border-radius: 10px;
 border: 0px solid #aaffff;
 margin: 15px;
 background-color: #aaffff;
+
+}
+@media screen and (max-width: 1150px) {
+   .number-box-holder{
+	grid-template-columns: 190px 190px 190px 190px 190px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+   .number-box-holder{
+	grid-template-columns: 190px 190px 190px 190px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+    .number-box-holder{
+	grid-template-columns: 190px 190px 190px;
+	}
+	
+@media screen and (max-width: 620px) {
+    .number-box-holder{
+	grid-template-columns: 190px 190px;
+	}
 }
 </style>
 <h1 class="heading"> Random Number Picker <h1>
