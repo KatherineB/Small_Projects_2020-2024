@@ -2,69 +2,9 @@
 <head>
 <title>RandNumPic2021</title>
 <meta charset="utf-8"/>
-<style>
-html {
-  background-color: #225555;
-  font-family: arial, verdana, tahoma;
-}
-
-.heading{
-  color: #ffffff;
-  margin-left: 15px;
-}
-
-.number-box-holder{
-display: grid;
-grid-template-columns: 190px 190px 190px 190px 190px 190px;
-grid-column-gap; 20px;
-}
-
-.number-box{
-padding: 8px;
-width: 150px;
-height: 27px;
-line-height: 0.85;
-font-size: 36px;
-text-align: right;
-border: 1px solid #aaaaff;
-background-color: #aaaaff;
-margin: 15px;
-}
-
-.button{
-width: 180px;
-height: 30px;
-font-size: 24px;
-color: #0000ff;
-border-radius: 10px;
-border: 0px solid #aaffff;
-margin: 15px;
-background-color: #aaffff;
-
-}
-@media screen and (max-width: 1150px) {
-   .number-box-holder{
-	grid-template-columns: 190px 190px 190px 190px 190px;
-	}
-}
-
-@media screen and (max-width: 992px) {
-   .number-box-holder{
-	grid-template-columns: 190px 190px 190px 190px;
-	}
-}
-
-@media screen and (max-width: 800px) {
-    .number-box-holder{
-	grid-template-columns: 190px 190px 190px;
-	}
-	
-@media screen and (max-width: 620px) {
-    .number-box-holder{
-	grid-template-columns: 190px 190px;
-	}
-}
-</style>
+<link rel="stylesheet" href="RandNumPic2021.css">
+</head>
+<body>
 <h1 class="heading"> Random Number Picker <h1>
 <input type="button" value="Pick Numbers" class="button" id="pn" onClick="pickRandNums()">
 <input type="button" value="Clear Numbers" class="button" id="cn" onClick="clearNums()">
@@ -80,30 +20,8 @@ background-color: #aaffff;
 </div>
 <div style="clear:both"></div>
 
-<script>
-var chosenNumbers = [];
-var numberOfNumbers = 20;
-var lowestNumber = 1;
-var highestNumber = 100;
-var duplicatesAllowed = true;
-
-function pickRandNums(){
-
-for (var i=0; i < numberOfNumbers; i++){
-    chosenNumbers[i] = Math.floor(Math.random() * highestNumber) + 1;
-   
-    var div = document.createElement('div');    
-    div.setAttribute('class', 'number-box');
-	div.textContent = chosenNumbers[i];
-    document.getElementById('nbh').appendChild(div); 
-   }
-}
-
-function clearNums(){
-document.querySelectorAll('.number-box').forEach(e => e.remove());
-}
-</script>
 
 
+<script src="RandNumPic2021.js"></script>
 </body>
 </html> 

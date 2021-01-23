@@ -1,0 +1,63 @@
+/* CSS for RandNumPic2021 */
+
+html {
+  background-color: #225555;
+  font-family: arial, verdana, tahoma;
+}
+
+.heading{
+  color: #ffffff;
+  margin-left: 15px;
+}
+
+.number-box-holder{
+display: grid;
+grid-template-columns: 170px 170px 170px 170px 170px 170px;
+grid-column-gap: 20px;
+}
+
+.number-box{
+padding: 8px;
+width: 150px;
+height: 27px;
+line-height: 0.85;
+font-size: 36px;
+text-align: right;
+border: 1px solid #aaaaff;
+background-color: #aaaaff;
+margin: 15px;
+}
+
+.button{
+width: 180px;
+height: 30px;
+font-size: 24px;
+color: #0000ff;
+border-radius: 10px;
+border: 0px solid #aaffff;
+margin: 15px;
+background-color: #aaffff;
+
+}
+@media screen and (max-width: 1150px) {
+   .number-box-holder{
+	grid-template-columns: 170px 170px 170px 170px 170px;
+	}
+}
+
+@media screen and (max-width: 992px) {
+   .number-box-holder{
+	grid-template-columns: 170px 170px 170px 170px;
+	}
+}
+
+@media screen and (max-width: 800px) {
+    .number-box-holder{
+	grid-template-columns: 170px 170px 170px;
+	}
+	
+@media screen and (max-width: 620px) {
+    .number-box-holder{
+	grid-template-columns: 170px 170px;
+	}
+}
