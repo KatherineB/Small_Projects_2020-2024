@@ -1,12 +1,16 @@
 /* JavaScript for RandNumPic2021.html */
 
 var chosenNumbers = [];
-var numberOfNumbers = 20;
+var numberOfNumbers = 0;
 var lowestNumber = 1;
 var highestNumber = 100;
 var duplicatesAllowed = true;
 
 function pickRandNums(){
+var non = document.getElementById("numberOfNumbers");
+var choice = non.options[non.selectedIndex].text;	
+
+numberOfNumbers = parseInt(choice);
 
 for (var i=0; i < numberOfNumbers; i++){
     chosenNumbers[i] = Math.floor(Math.random() * highestNumber) + 1;

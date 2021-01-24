@@ -5,9 +5,27 @@ html {
   font-family: arial, verdana, tahoma;
 }
 
+select { 
+	background-color: #bbf; 
+	font-size: 18px;
+	width: 45px; 
+	height: 30px; 
+	color: #000; 
+	cursor: pointer; 
+	border:1px solid #bbf; 
+	border-radius:3px; 
+	margin-left: 15px;
+} 
+
 .heading{
   color: #ffffff;
   margin-left: 15px;
+}
+
+.input-label{
+  color: #ffffff;
+  margin-left: 15px;
+  font-size: 20px;
 }
 
 .number-box-holder{
@@ -61,3 +79,5 @@ background-color: #aaffff;
 	grid-template-columns: 170px 170px;
 	}
 }
+ 
+          

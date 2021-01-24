@@ -1,13 +1,38 @@
 <!DOCTYPE html>
+<html>
 <head>
 <title>RandNumPic2021</title>
 <meta charset="utf-8"/>
 <link rel="stylesheet" href="RandNumPic2021.css">
 </head>
 <body>
-<h1 class="heading"> Random Number Picker <h1>
+<h1 class="heading"> Random Number Picker </h1>
+
+<div class="input-label">Number of random numbers to be chosen</div>
+
+ <select style="width: 60px" id="numberOfNumbers" name="numberOfNumbers">
+  <option selected="">1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>10</option>
+  <option>20</option>
+  <option>30</option>
+  <option>40</option>
+  <option>50</option>
+  <option>75</option>
+  <option>100</option>
+</select>
+
+
+
+<div style="clear:both"></div>
+
 <input type="button" value="Pick Numbers" class="button" id="pn" onClick="pickRandNums()">
 <input type="button" value="Clear Numbers" class="button" id="cn" onClick="clearNums()">
+
+
 <div class="number-box-holder" id="nbh">
 		<!--<div class="number-box" id="num1" >
 
@@ -18,7 +43,7 @@
 
 		<!--<div style="clear:both"></div> -->
 </div>
-<div style="clear:both"></div>
+
 
 
 
