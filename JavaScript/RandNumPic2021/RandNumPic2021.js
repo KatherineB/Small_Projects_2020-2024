@@ -2,9 +2,6 @@
 
 var chosenNumbers = [];
 var numberOfNumbers = 0;
-var lowestNumber = 1;
-var highestNumber = 100;
-var duplicatesAllowed = true;
 
 function pickRandNums(){
 var non = document.getElementById("numberOfNumbers").value;
@@ -31,16 +28,43 @@ var end = end100 + end10 + end1;
 
 var difference = end - start;
 
-for (var i=0; i < numberOfNumbers; i++){
-    chosenNumbers[i] = Math.floor(Math.random() * (difference + 1)) + start;
-   
-    var div = document.createElement('div');    
-    div.setAttribute('class', 'number-box');
-	div.textContent = chosenNumbers[i];
-    document.getElementById('nbh').appendChild(div); 
-   }
+	if(uon.checked && numberOfNumbers > difference + 1){
+		 alert("It is not possible to produce more unique numbers than the number of numbers that are in the range. Please uncheck the no duplicates checkbox or change something else about your request and then try again.");
+	}
+	else{
+		for (var i=0; i < numberOfNumbers; i++){
+		 if(uon.checked){
+			allowNoDuplicates(difference, start);
+		 }
+		 else{
+			chosenNumbers[i] = Math.floor(Math.random() * (difference + 1)) + start;
+		 } 
+		 
+		 var div = document.createElement('div');    
+		 div.setAttribute('class', 'number-box');
+		 div.textContent = chosenNumbers[i];
+		 document.getElementById('nbh').appendChild(div); 		 
+		}
+		
+    }
+}
+function allowNoDuplicates(difference, start){
+
+	var pick = Math.floor(Math.random() * (difference + 1)) + start;
+	
+	if(chosenNumbers.indexOf(pick) > -1){
+	
+		while(chosenNumbers.indexOf(pick) > -1){
+			pick = Math.floor(Math.random() * (difference + 1)) + start;			
+		}
+		
+	}
+	
+	chosenNumbers.push(pick);
+
 }
 
 function clearNums(){
 document.querySelectorAll('.number-box').forEach(e => e.remove());
+chosenNumbers = [];
 }
