@@ -8,114 +8,147 @@
 <body>
 <h1 class="heading"> Random Number Picker </h1>
 
-<div class="input-label">Number of Random Numbers to be Chosen</div>
+<div class="options-grid">
 
- <select class="non-input" id="numberOfNumbers" name="numberOfNumbers">
-  <option selected="">1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-  <option>10</option>
-  <option>20</option>
-  <option>30</option>
-  <option>40</option>
-  <option>50</option>
-  <option>75</option>
-  <option>100</option>
-</select> 
+<div class="option-cell">
 
-<div class="input-label">Range of Numbers to be Chosen</div>
+	<div class="input-label">Number of Random Numbers</div>
 
-<select class="range-input" id="start-100" name="start-100">
-  <option selected="">0</option>
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-  <option>6</option>
-  <option>7</option>
-  <option>8</option>
-  <option>9</option>
-</select> 
-
-<select class="range-input" id="start-10" name="start-10">
-  <option selected="">0</option>
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-  <option>6</option>
-  <option>7</option>
-  <option>8</option>
-  <option>9</option>
-</select> 
-
-<select class="range-input" id="start-1" name="start-1">
-  <option selected="">0</option>
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-  <option>6</option>
-  <option>7</option>
-  <option>8</option>
-  <option>9</option>
-</select> 
-
-<span class="other-text">to</span>
-
-<select class="range-input" id="end-100" name="end-100">
-  <option selected="">0</option>
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-  <option>6</option>
-  <option>7</option>
-  <option>8</option>
-  <option>9</option>
-</select> 
-
-<select class="range-input" id="end-10" name="end-10">
-  <option selected="">0</option>
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-  <option>6</option>
-  <option>7</option>
-  <option>8</option>
-  <option>9</option>
-</select>
-
-<select class="range-input" id="end-1" name="end-1">
-  <option selected="">0</option>
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-  <option>6</option>
-  <option>7</option>
-  <option>8</option>
-  <option>9</option>
-</select>
-
-<div style="clear:both"></div>
-
-<div class="input-label">Uniqueness of Numbers</div>
-<div class="checkbox-input">
-   <input type="checkbox" id="uon" >
-   <label for="uon" class="checkbox-label">Do not allow duplicates<label>
+	 <select class="non-input" id="numberOfNumbers" name="numberOfNumbers">
+	  <option selected="">1</option>
+	  <option>2</option>
+	  <option>3</option>
+	  <option>4</option>
+	  <option>5</option>
+	  <option>10</option>
+	  <option>20</option>
+	  <option>30</option>
+	  <option>40</option>
+	  <option>50</option>
+	  <option>75</option>
+	  <option>100</option>
+	</select> 
 </div>
-	
-<div style="clear:both"></div>
+
+<div class="option-cell">
+
+	<div class="input-label">Range of Numbers</div>
+
+	<select class="range-input" id="start-100" name="start-100">
+	  <option selected="">0</option>
+	  <option>1</option>
+	  <option>2</option>
+	  <option>3</option>
+	  <option>4</option>
+	  <option>5</option>
+	  <option>6</option>
+	  <option>7</option>
+	  <option>8</option>
+	  <option>9</option>
+	</select> 
+
+	<select class="range-input" id="start-10" name="start-10">
+	  <option selected="">0</option>
+	  <option>1</option>
+	  <option>2</option>
+	  <option>3</option>
+	  <option>4</option>
+	  <option>5</option>
+	  <option>6</option>
+	  <option>7</option>
+	  <option>8</option>
+	  <option>9</option>
+	</select> 
+
+	<select class="range-input" id="start-1" name="start-1">
+	  <option selected="">0</option>
+	  <option>1</option>
+	  <option>2</option>
+	  <option>3</option>
+	  <option>4</option>
+	  <option>5</option>
+	  <option>6</option>
+	  <option>7</option>
+	  <option>8</option>
+	  <option>9</option>
+	</select> 
+
+	<span class="other-text">to</span>
+
+	<select class="range-input" id="end-100" name="end-100">
+	  <option selected="">0</option>
+	  <option>1</option>
+	  <option>2</option>
+	  <option>3</option>
+	  <option>4</option>
+	  <option>5</option>
+	  <option>6</option>
+	  <option>7</option>
+	  <option>8</option>
+	  <option>9</option>
+	</select> 
+
+	<select class="range-input" id="end-10" name="end-10">
+	  <option selected="">0</option>
+	  <option>1</option>
+	  <option>2</option>
+	  <option>3</option>
+	  <option>4</option>
+	  <option>5</option>
+	  <option>6</option>
+	  <option>7</option>
+	  <option>8</option>
+	  <option>9</option>
+	</select>
+
+	<select class="range-input" id="end-1" name="end-1">
+	  <option selected="">0</option>
+	  <option>1</option>
+	  <option>2</option>
+	  <option>3</option>
+	  <option>4</option>
+	  <option>5</option>
+	  <option>6</option>
+	  <option>7</option>
+	  <option>8</option>
+	  <option>9</option>
+	</select>
+
+</div>
+
+<div class="option-cell">
+
+	<div class="input-label">Uniqueness of Numbers</div>
+	<div class="checkbox-input">
+	   <input type="checkbox" id="uon" >
+	   <label for="uon" class="checkbox-label">Do not allow duplicates<label>
+	</div>
+
+</div>	
+
+
+<div class="option-cell">
+
+<div class="input-label">Display Order of Numbers</div>
+
+	 <div class="rad-btn-box">
+	  <input class="rad-btn" type="radio" name="order" id="asc"value="asc">
+	  <label for="asc" class="rad-btn-label">Ascending<label>
+	</div>
+	<div class="rad-btn-box">
+	  <input class="rad-btn" type="radio" name="order" id="des" value="des">
+	  <label for="des" class="rad-btn-label">Descending<label>
+	</div>
+	<div class="rad-btn-box">
+	  <input class="rad-btn" type="radio" name="order" id="un" value="un">
+	  <label for="un" class="rad-btn-label">Unsorted<label>
+	</div>
+     (display order not yet fully implemented)
+
+</div>
+</div>
+
+<br>
 
 <input type="button" value="Pick Numbers" class="button" id="pn" onClick="pickRandNums()">
 <input type="button" value="Clear Numbers" class="button" id="cn" onClick="clearNums()">
