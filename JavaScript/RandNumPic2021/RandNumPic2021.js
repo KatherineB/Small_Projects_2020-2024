@@ -29,7 +29,7 @@ var end = end100 + end10 + end1;
 var difference = end - start;
 
 	if(uon.checked && numberOfNumbers > difference + 1){
-		 alert("It is not possible to produce more unique numbers than the number of numbers that are in the range. Please uncheck the no duplicates checkbox or change something else about your request and then try again.");
+		 alert("It is not possible to produce more unique numbers than the number of numbers that are in the range. Please uncheck the no duplicates checkbox or change the number of numbers or the range and then try again.");
 	}
 	else{
 		for (var i=0; i < numberOfNumbers; i++){
@@ -39,7 +39,21 @@ var difference = end - start;
 		 else{
 			chosenNumbers[i] = Math.floor(Math.random() * (difference + 1)) + start;
 		 } 
-		 
+		}
+		
+		var choice = document.getElementById('asc');
+	    if( choice.checked ){
+			alert('ascending is checked');
+			chosenNumbers.sort(function(a, b){return a-b});
+		}
+		
+		var choice = document.getElementById('des');
+	    if( choice.checked ){
+			alert('descending is checked');
+			chosenNumbers.sort(function(a, b){return b-a});
+		}
+				
+		for (var i=0; i < numberOfNumbers; i++){
 		 var div = document.createElement('div');    
 		 div.setAttribute('class', 'number-box');
 		 div.textContent = chosenNumbers[i];
