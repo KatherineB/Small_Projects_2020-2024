@@ -43,13 +43,11 @@ var difference = end - start;
 		
 		var choice = document.getElementById('asc');
 	    if( choice.checked ){
-			alert('ascending is checked');
 			chosenNumbers.sort(function(a, b){return a-b});
 		}
 		
 		var choice = document.getElementById('des');
 	    if( choice.checked ){
-			alert('descending is checked');
 			chosenNumbers.sort(function(a, b){return b-a});
 		}
 				
