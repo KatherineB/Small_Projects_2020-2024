@@ -1,0 +1,66 @@
+/* CSS for Sequence */
+html{
+   background-color: #bbff99;
+   font-family: arial, verdana;
+}
+.squares-grid{
+   display: grid; 
+   grid-template-columns: 80px 80px 80px 80px 80px 100px;
+   grid-template-rows: 80px 80px 80px 80px 80px;
+   grid-gap: 10px;
+   margin-bottom: 5px;
+} 
+
+.square{
+    border: 2px solid black;
+	background-color: #ffffff;
+	height: 80px;
+	width: 80px;
+	display: grid;
+	grid-template-columns: 26px 26px 26px;
+	grid-gap: 0px;
+}
+
+.result-square{
+   margin-left: 20px;
+}
+
+.square-btn{
+   height: 17px;
+	width: 27px;
+	margin: 0px;
+	border: none;
+}
+
+.square-btn-orange{
+    background-color: #ee8833;
+}
+
+.square-btn-cyan{
+    background-color: cyan;
+}
+
+.square-btn-purple{
+    background-color: purple;
+}
+
+@media screen and (max-width: 750px) {
+	.square{
+		height: 50px;
+	    width: 50px;
+		grid-template-columns: 17px 17px 17px;
+		
+	}
+	.square-btn{
+	    height: 10px;
+		width: 15px;
+	}
+	.squares-grid{
+	   grid-template-columns: 50px 50px 50px 50px 50px 60px;
+	   grid-template-rows: 50px 50px 50px 50px 50px;
+	   grid-gap: 10px;
+	   margin-bottom: 5px;
+    } 
+    
+	
+}
