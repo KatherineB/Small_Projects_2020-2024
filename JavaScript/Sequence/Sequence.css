@@ -22,7 +22,31 @@ html{
 }
 
 .result-square{
-   margin-left: 20px;
+	border: 2px solid #777;
+	width: 80px;    
+    height: 66px;
+	font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    background-color: #ddff88;
+	color: #333;
+    padding-top: 14px;
+	margin-left: 20px;
+}
+
+.result-display{
+	border: 2px solid #777;
+	width: 80px;    
+    height: 70px;
+	font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    background-color: #000088;
+	color: #fff;
+    padding-top: 10px;
+	margin-left: 20px;
 }
 
 .square-btn{
@@ -48,13 +72,30 @@ html{
 	.square{
 		height: 50px;
 	    width: 50px;
-		grid-template-columns: 17px 17px 17px;
-		
+		grid-template-columns: 17px 17px 17px;	
 	}
+	
+	.result-square{
+	    width: 50px;    
+        height: 42px;
+        padding-top: 8px;
+	    margin-left: 15px;
+	    font-size: 10px;
+   }
+   
+   .result-display{
+	    width: 50px;    
+        height: 38px;
+        padding-top: 12px;
+	    margin-left: 15px;
+	    font-size: 24px;
+   }
+
 	.square-btn{
 	    height: 10px;
 		width: 15px;
 	}
+	
 	.squares-grid{
 	   grid-template-columns: 50px 50px 50px 50px 50px 60px;
 	   grid-template-rows: 50px 50px 50px 50px 50px;
@@ -62,5 +103,4 @@ html{
 	   margin-bottom: 5px;
     } 
     
-	
 }

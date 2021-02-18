@@ -22,7 +22,7 @@ function pickSoln(){
    solnColourCodes[i] = (Math.floor(Math.random() * 3)) + 1;
    }
    
-   console.log(solnColourCodes);
+//console.log(solnColourCodes);
 }
 
 function setColourChoice(x, y, colour){
@@ -38,5 +38,55 @@ function setColourChoice(x, y, colour){
    }
    
    squareColours[x][y] = colour;
+}
+
+function getGuess(row){
+
+	var totalCorrect = 0;
+	
+	if(squareColours[row][0] == solnColourCodes[0] && squareColours[row][1] == solnColourCodes[1]){
+		totalCorrect++;
+	}
+	
+	if(squareColours[row][0] == solnColourCodes[0] && squareColours[row][1] == solnColourCodes[1] && squareColours[row][2] == solnColourCodes[2]){
+		totalCorrect++;
+	}
+	
+	if(squareColours[row][1] == solnColourCodes[1] && squareColours[row][2] == solnColourCodes[2] && squareColours[row][3] == solnColourCodes[3]){
+		totalCorrect++;
+	} 
+	
+	if(squareColours[row][2] == solnColourCodes[2] && squareColours[row][3] == solnColourCodes[3] && squareColours[row][4] == solnColourCodes[4]){
+		totalCorrect++;
+	} 
+	
+	if(squareColours[row][3] == solnColourCodes[3] && squareColours[row][4] == solnColourCodes[4]){
+		totalCorrect++;
+	}
+	
+	switch(row){
+	    case 0: 
+			 document.getElementById('a-result').innerHTML = totalCorrect;
+			 document.getElementById('a-result').className = "result-display";
+			 break;
+		case 1: 
+			 document.getElementById('b-result').innerHTML = totalCorrect;	
+             document.getElementById('b-result').className = "result-display";			 
+			 break;
+		case 2: 
+			 document.getElementById('c-result').innerHTML = totalCorrect;
+			 document.getElementById('c-result').className = "result-display";
+			 break;
+		case 3: 
+			 document.getElementById('d-result').innerHTML = totalCorrect;		
+             document.getElementById('d-result').className = "result-display";			 
+			 break;
+		case 4: 
+			 document.getElementById('e-result').innerHTML = totalCorrect;
+			 document.getElementById('e-result').className = "result-display";
+			 break;
+		default: 
+			 alert("Error: Nothing matched in switch.");
+	}
 }
   
