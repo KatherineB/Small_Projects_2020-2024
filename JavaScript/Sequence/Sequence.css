@@ -3,12 +3,16 @@ html{
    background-color: #bbff99;
    font-family: arial, verdana;
 }
+.flexbox-line{
+	display: flex;
+    flex-direction: row;
+}
 .squares-grid{
    display: grid; 
    grid-template-columns: 80px 80px 80px 80px 80px 100px;
    grid-template-rows: 80px 80px 80px 80px 80px;
    grid-gap: 10px;
-   margin-bottom: 5px;
+   margin-bottom: 60px;
 } 
 
 .square{
@@ -68,7 +72,44 @@ html{
     background-color: purple;
 }
 
+.btn-msg-panel{
+	margin-left: 50px;
+}
+
+.button{
+	height: 40px;
+	width: 140px;
+	background-color: #ddff88;
+	font-size: 22px;
+	margin-bottom: 30px;
+	margin-right: 10px;
+	border-radius: 10px;
+}
+
+.win{
+	display: none;
+	width: 400px;
+	color: #555599;
+	font-size: 28px;
+}
+
+.loss{
+	display: none;
+	width: 400px;
+	color: #555599;
+	font-size: 22px;
+}
+
+@media screen and (max-width: 1050px) {
+	.flexbox-line{
+		flex-direction: column;
+	}
+	.btn-msg-panel{
+	   margin-left: 35px;
+    }
+}
 @media screen and (max-width: 750px) {
+	
 	.square{
 		height: 50px;
 	    width: 50px;
@@ -100,7 +141,30 @@ html{
 	   grid-template-columns: 50px 50px 50px 50px 50px 60px;
 	   grid-template-rows: 50px 50px 50px 50px 50px;
 	   grid-gap: 10px;
-	   margin-bottom: 5px;
+	   margin-bottom: 40px;
     } 
+	
+	.btn-msg-panel{
+	   margin-left: 20px;
+    }
+	
+	.button{
+		height: 25px;
+		width: 100px;
+		font-size: 15px;
+		border-radius: 5px;
+	}
+	
+	.win{
+		width: 300px;
+		color: #555599;
+		font-size: 24px;
+	}
+
+	.loss{
+		width: 300px;
+		color: #555599;
+		font-size: 18px;
+	}
     
 }

@@ -88,5 +88,15 @@ function getGuess(row){
 		default: 
 			 alert("Error: Nothing matched in switch.");
 	}
+	
+	if(totalCorrect == 5){
+		//alert("You Win !!!");
+		document.getElementById('win').style.display = 'block';
+	}
+	
+	if(row == 4 && totalCorrect < 5){
+		//alert("Sorry. You have lost. You did not guess the sequence");
+		document.getElementById('loss').style.display = 'block';
+	}
 }
   
