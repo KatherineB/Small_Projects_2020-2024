@@ -100,3 +100,38 @@ function getGuess(row){
 	}
 }
   
+function startNewGame(){
+	squareColours = [ [0, 0, 0, 0, 0],
+				  [0, 0, 0, 0, 0],
+				  [0, 0, 0, 0, 0],
+				  [0, 0, 0, 0, 0],
+				  [0, 0, 0, 0, 0]  ];
+
+	solnColourCodes = [0, 0, 0, 0, 0];
+	
+	for(var i=0; i<5; i++){
+		for(var j=0; j<5; j++){
+			document.getElementById(squareIds[i][j]).style.backgroundColor = '#ffffff';
+		}
+	}
+	
+	document.getElementById('a-result').className = "result-square";
+	document.getElementById('a-result').innerHTML = "DISPLAY LINE 1 RESULT";
+	
+	document.getElementById('b-result').className = "result-square";
+	document.getElementById('b-result').innerHTML = "DISPLAY LINE 2 RESULT";
+	
+	document.getElementById('c-result').className = "result-square";
+	document.getElementById('c-result').innerHTML = "DISPLAY LINE 3 RESULT";
+	
+	document.getElementById('d-result').className = "result-square";
+	document.getElementById('d-result').innerHTML = "DISPLAY LINE 4 RESULT";
+	
+	document.getElementById('e-result').className = "result-square";
+	document.getElementById('e-result').innerHTML = "DISPLAY LINE 5 RESULT";
+	
+	document.getElementById('win').style.display = 'none';
+	document.getElementById('loss').style.display = 'none';
+
+	pickSoln();
+}
