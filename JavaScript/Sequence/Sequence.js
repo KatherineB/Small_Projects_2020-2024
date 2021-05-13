@@ -14,14 +14,25 @@ squareColours = [ [0, 0, 0, 0, 0],
 
 solnColourCodes = [0, 0, 0, 0, 0];
 
+solnColours = [" ", " ", " ", " ", " "];
+
 pickSoln();
 
 function pickSoln(){
 
    for(var i=0; i<5; i++){
-   solnColourCodes[i] = (Math.floor(Math.random() * 3)) + 1;
+	   solnColourCodes[i] = (Math.floor(Math.random() * 3)) + 1;
+	   
+	   if(solnColourCodes[i] == 1){
+		   solnColours[i] = '#ee8833';
+	   }
+	   else if(solnColourCodes[i] == 2){
+           solnColours[i] = 'cyan';
+	   }
+	   else if(solnColourCodes[i] == 3){
+           solnColours[i] = 'purple';
+	   }
    }
-   
 //console.log(solnColourCodes);
 }
 
@@ -95,9 +106,19 @@ function getGuess(row){
 	}
 	
 	if(row == 4 && totalCorrect < 5){
+		
 		//alert("Sorry. You have lost. You did not guess the sequence");
 		document.getElementById('loss').style.display = 'block';
+		setSolnColours();
 	}
+}
+
+function setSolnColours(){
+	document.getElementById("sol-1").style.backgroundColor = solnColours[0];
+	document.getElementById("sol-2").style.backgroundColor = solnColours[1];
+	document.getElementById("sol-3").style.backgroundColor = solnColours[2];
+	document.getElementById("sol-4").style.backgroundColor = solnColours[3];
+	document.getElementById("sol-5").style.backgroundColor = solnColours[4];
 }
   
 function startNewGame(){

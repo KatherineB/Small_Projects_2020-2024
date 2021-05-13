@@ -100,6 +100,19 @@ html{
 	font-size: 22px;
 }
 
+.soln-row{
+	display: flex;
+    flex-direction: row;
+	margin-top: 5px;
+}
+
+.soln{
+	height: 25px;
+	width: 25px;
+	border: 2px solid #000;
+	margin-right: 3px;
+}
+
 @media screen and (max-width: 1050px) {
 	.flexbox-line{
 		flex-direction: column;
@@ -164,7 +177,11 @@ html{
 	.loss{
 		width: 300px;
 		color: #555599;
-		font-size: 18px;
+		font-size: 16px;
+	}
+	.soln{
+	    height: 18px;
+		width: 18px;
 	}
     
 }
