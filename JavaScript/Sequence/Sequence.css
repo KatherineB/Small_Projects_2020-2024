@@ -1,8 +1,13 @@
 /* CSS for Sequence */
 html{
-   background-color: #bbff99;
+   background-color: #555;
    font-family: arial, verdana;
 }
+
+h1{
+	color: #eee;
+}
+
 .flexbox-line{
 	display: flex;
     flex-direction: row;
@@ -33,21 +38,22 @@ html{
     font-weight: bold;
     text-align: center;
     display: inline-block;
-    background-color: #ddff88;
+    background-color: #dddddd;
+	border-radius: 10px;
 	color: #333;
     padding-top: 14px;
 	margin-left: 20px;
 }
 
 .result-display{
-	border: 2px solid #777;
+	border: 2px solid #000;
 	width: 80px;    
     height: 70px;
 	font-size: 50px;
     font-weight: bold;
     text-align: center;
     display: inline-block;
-    background-color: #000088;
+    background-color: #000000;
 	color: #fff;
     padding-top: 10px;
 	margin-left: 20px;
@@ -79,7 +85,7 @@ html{
 .button{
 	height: 40px;
 	width: 140px;
-	background-color: #ddff88;
+	background-color: #ddd;
 	font-size: 22px;
 	margin-bottom: 30px;
 	margin-right: 10px;
@@ -89,14 +95,14 @@ html{
 .win{
 	display: none;
 	width: 400px;
-	color: #555599;
+	color: #eee;
 	font-size: 28px;
 }
 
 .loss{
 	display: none;
 	width: 400px;
-	color: #555599;
+	color: #eee;
 	font-size: 22px;
 }
 
@@ -135,6 +141,7 @@ html{
         padding-top: 8px;
 	    margin-left: 15px;
 	    font-size: 10px;
+		border-radius: 10px;
    }
    
    .result-display{
@@ -170,13 +177,11 @@ html{
 	
 	.win{
 		width: 300px;
-		color: #555599;
 		font-size: 24px;
 	}
 
 	.loss{
 		width: 300px;
-		color: #555599;
 		font-size: 16px;
 	}
 	.soln{
