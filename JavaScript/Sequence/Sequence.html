@@ -150,7 +150,7 @@
 	<div class="btn-msg-panel">
 		<div class="btns">
 			<input type="button" value="New Game" class="button" id="ng" onClick="startNewGame()">
-			<input type="button" value="How to Play" class="button" id="htp" onClick="">
+			<input type="button" value="How to Play" class="button" id="htp" onClick="howToPlay()">
 		</div>
 		<div class="msgs">
 			<div class="win" id="win">YOU WIN !!!
@@ -167,7 +167,15 @@
 			 
 			</div>
 		</div>
+		<div class="instruct" id="instruct">
+	   <h1>How to Play Sequence</h1>
+
+		<p>A sequence of five coloured squares that are each one of three different colours is chosen at random. The player must try to guess the colours of each square. To make a guess, the player chooses the colours for a line of five squares and then clicks on the 'display result' button at the end of that line.</p>
+
+		<p>Instead of counting the number of correct colours in correct squares, the game counts correct partial sequences and displays that number as a result. A partial sequence is any square, the square to the left of it and the square to the right of it on the same horizontal line. For squares at an end of a line, that square and the one square that is beside it are all that counts. Thus a partial sequence can contain either two or three squares.</p>
+	    </div>
 	</div>
+	
 </div>
 <script src="Sequence.js"></script>
 </body>

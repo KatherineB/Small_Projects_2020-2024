@@ -156,3 +156,7 @@ function startNewGame(){
 
 	pickSoln();
 }
+
+function howToPlay(){
+	document.getElementById('instruct').style.display = 'inline-block';
+}

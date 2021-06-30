@@ -118,6 +118,10 @@ h1{
 	border: 2px solid #000;
 	margin-right: 3px;
 }
+.instruct{
+	color: #fff;
+	display: none;
+}
 
 @media screen and (max-width: 1050px) {
 	.flexbox-line{
